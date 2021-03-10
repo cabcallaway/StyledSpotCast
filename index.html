@@ -7,6 +7,15 @@
 </head>
 <body style="color: white">
   <div>Hello World</div>
-  <p>tf bruh</p>
+  <div id="message"></div>
+  <script>
+    const context = cast.framework.CastReceiverContext.getInstance();
+    context.addCustomMessageListener('urn:x-cast:ch.cimnine.cromecast-test.text', function (customEvent) {
+      if (customEvent.data.type == "message") {
+        document.getElementById("message").innerHTML = customEvent.data.text;
+      }
+    });
+    context.start();
+  </script>
 </body>
 </html>

@@ -10,33 +10,11 @@
   </head>
 
   <body>
-    <iframe</iframe>
+    <iframe src="https://open.spotify.com/embed/album/3S4zFHeNv6oNLN8H9HXy2w?utm_source=generator" width="100%" height="100%"></iframe>
     <script>
-    window.onSpotifyWebPlaybackSDKReady = () => {
-      console.log('bigchungus')
-  const token = 'BQAayZAZaMkaEv20_g0x_XoOOe7EkldylZqLnCSSWg5Trd6G_8c9Z9lqJLrB0vNsRhFU9qXvV8TES0_lRVNgHkP27Gz8aOPSghEJ2jXBs9BdvOtVYk4dq0UTreBgxDd0AqEfDRLIXpQKl22e55ctaaj9YwbH0Oram0Q';
-  const player = new Spotify.Player({
-    name: 'Web Playback SDK Quick Start Player',
-    getOAuthToken: cb => { cb(token); },
-    volume: 0.5
-  });
-      player.addListener('initialization_error', ({ message }) => { 
-      console.error(message);
-  });
-
-  player.addListener('authentication_error', ({ message }) => {
-      console.error(message);
-  });
-
-  player.addListener('account_error', ({ message }) => {
-      console.error(message);
-  });
-      player.connect();
-      document.getElementById('togglePlay').onclick = function() {
-  player.togglePlay();
-};
-    </script>
+    
     <button id="togglePlay">Toggle Play</button>
+    <h1>BIGCHUNGUS</h1>
     <footer>
       <script src="receiver.js"></script>
   </footer>

@@ -12,6 +12,7 @@
   <body>
     <script>
     window.onSpotifyWebPlaybackSDKReady = () => {
+      console.log('bigchungus')
   const token = 'BQAayZAZaMkaEv20_g0x_XoOOe7EkldylZqLnCSSWg5Trd6G_8c9Z9lqJLrB0vNsRhFU9qXvV8TES0_lRVNgHkP27Gz8aOPSghEJ2jXBs9BdvOtVYk4dq0UTreBgxDd0AqEfDRLIXpQKl22e55ctaaj9YwbH0Oram0Q';
   const player = new Spotify.Player({
     name: 'Web Playback SDK Quick Start Player',
@@ -30,7 +31,11 @@
       console.error(message);
   });
       player.connect();
+      document.getElementById('togglePlay').onclick = function() {
+  player.togglePlay();
+};
     </script>
+    <button id="togglePlay">Toggle Play</button>
     <footer>
       <script src="receiver.js"></script>
   </footer>

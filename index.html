@@ -6,10 +6,19 @@
     <script src="//www.gstatic.com/cast/sdk/libs/caf_receiver/v3/cast_receiver_framework.js"></script>
     <!-- Cast Debug Logger -->
     <script src="//www.gstatic.com/cast/sdk/libs/devtools/debug_layer/caf_receiver_logger.js"></script>
+    <script src="https://sdk.scdn.co/spotify-player.js"></script>
   </head>
 
   <body>
-    <cast-media-player></cast-media-player>
+    <script>
+    window.onSpotifyWebPlaybackSDKReady = () => {
+  const token = 'BQAayZAZaMkaEv20_g0x_XoOOe7EkldylZqLnCSSWg5Trd6G_8c9Z9lqJLrB0vNsRhFU9qXvV8TES0_lRVNgHkP27Gz8aOPSghEJ2jXBs9BdvOtVYk4dq0UTreBgxDd0AqEfDRLIXpQKl22e55ctaaj9YwbH0Oram0Q';
+  const player = new Spotify.Player({
+    name: 'Web Playback SDK Quick Start Player',
+    getOAuthToken: cb => { cb(token); },
+    volume: 0.5
+  });
+    </script>
     <footer>
       <script src="receiver.js"></script>
   </footer>
